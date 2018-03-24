@@ -1,0 +1,37 @@
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">We've got what you need!</h2>
+                <hr class="light">
+                <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+                <a href="/schools" class="btn btn-default btn-xl">Get Started!</a>
+                <h1>投稿一覧</h1>
+                <div class="col-lg-6">
+                    <%= link_to '投稿する', new_school_path, class: "btn btn-default pull-right" %>
+                  </div>
+                <table class="table table-striped">
+                    <thead>
+                      <th>タイトル</th>
+                      <th>名前</th>
+                      <th>教員歴</th>
+                      <th>役職</th>
+                    </thead>
+                    <tbody>
+                      <% @schools.each do |school| %>
+                        <tr>
+                          <td><%= school.title %></td>
+                          <td><%= school.name %></td>
+                          <td><%= school.career %></td>
+                          <td><%= school.post.position_name %></td>
+                          <td><%= link_to '詳細', school, class: "btn btn-default btn-xs" %></td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+                  <%= paginate @schools %>
+
+            </div>
+        </div>
+    </div>
+</section>

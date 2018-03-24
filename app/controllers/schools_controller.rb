@@ -1,7 +1,7 @@
 class SchoolsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @schools = School.all
+    @schools = School.page(params[:page])
   end
 
   def create
@@ -9,7 +9,6 @@ class SchoolsController < ApplicationController
     if  @school.save
     redirect_to schools_path
     else
-    flash.now[:alert] = @school.errors.full_messages
     render :new
     end
   end

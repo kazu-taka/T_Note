@@ -1,8 +1,13 @@
 <h1>投稿フォーム</h1>
-<% if flash["alert"].present? %>
-  <% flash["alert"].each do |value| %>
-    <%= content_tag(:div, value) %>
-  <% end %>
+<% if @school.errors.any? %>
+  <div class="alert alert-danger">
+    <p><b><%= @school.errors.count %>件のエラーがあります</b></p>
+    <ul>
+    <% @school.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
 <% end %>
 <%= form_with model: @school, local: true do |form| %>
 
