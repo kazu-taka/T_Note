@@ -1,5 +1,14 @@
 ja:
   activerecord:
+    models:
+      school:
+    attributes:
+      customer:
+        name: "名前"
+        Title: "タイトル"
+        career: "教員歴"
+        gakko: "性別"
+        post_id: "役職"
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
