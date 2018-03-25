@@ -182,12 +182,13 @@ body, input, button {
 
   <div class="input-group input-group-lg">
      <span class="input-group-addon">
-    <input type="text" class="form-control" placeholder="Email">
+    <%= f.email_field :email, autofocus: true, class: "form-control" ,placeholder: "Email"%>
   </span>
   </div>
+
   <div class="input-group input-group-lg">
      <span class="input-group-addon">
-    <input type="password" class="form-control" placeholder="Password">
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" ,placeholder: "Password"%>
     <% if @minimum_password_length %>
     <!--<em>(<%= @minimum_password_length %> 文字以上)</em>-->
     <% end %><br />
@@ -197,7 +198,7 @@ body, input, button {
 
   <div class="input-group input-group-lg">
      <span class="input-group-addon">
-  <input type="password_confirmation" class="form-control" placeholder="Password_conf">
+       <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" ,placeholder: "Password_conf"%>
     </span>
   </div>
 
