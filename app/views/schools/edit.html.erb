@@ -1,5 +1,14 @@
 <h1>投稿更新フォーム</h1>
-
+<% if @school.errors.any? %>
+  <div class="alert alert-danger">
+    <p><b><%= @school.errors.count %>件のエラーがあります</b></p>
+    <ul>
+    <% @school.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 <%= form_with model: @school, local: true do |form| %>
 
 <div class="form-group">

@@ -3,6 +3,6 @@ class CreativesController < ApplicationController
 
   def index
     @school = School.new
-    @schools = School.page(params[:page]) 
+    @schools = School.page(params[:page])
   end
 end

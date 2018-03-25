@@ -14,3 +14,6 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+/*Original form by frytyler
+https://codepen.io/frytyler/pen/EGdtg
+*/
