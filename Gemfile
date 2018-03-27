@@ -34,6 +34,8 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'devise'
 gem 'frontend-generators'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
