@@ -12,8 +12,9 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require bootstrap-sprockets
 //= require_tree .
-//= require bootstrap
 /*Original form by frytyler
 https://codepen.io/frytyler/pen/EGdtg
 */
